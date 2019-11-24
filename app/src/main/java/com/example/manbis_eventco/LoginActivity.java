@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    final static String TAG = "LoginActivity";
+    private final static String TAG = "LoginActivity";
 
     @BindView(R.id.username_layout)
     TextInputLayout username;
@@ -29,11 +29,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        SharedPreferences sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
-
-
     }
 
-    @OnClick
+    @OnClick(R.id.btn_login)
+    void login()
+    {
+        String user = username.getEditText().getText().toString();
+        String pass = password.getEditText().getText().toString();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
+    }
 }
