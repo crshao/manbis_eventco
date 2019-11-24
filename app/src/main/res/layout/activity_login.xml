@@ -20,20 +20,22 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             android:text="Make your Dream Event Come True"
-            android:textSize="14dp"/>
+            android:textSize="10dp"
+            android:letterSpacing="0.2"/>
         <TextView
             android:paddingTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="60dp"
+            android:textSize="50dp"
             android:textStyle="bold"
             android:text="Event.co"
             android:textColor="@color/colorPrimary"
-            android:paddingBottom="80dp"/>
+            android:paddingBottom="80dp"
+            android:fontFamily="@font/opensansextraboldd"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/rounded_background"
             android:orientation="vertical"
             android:backgroundTint="@color/pink"
             android:paddingLeft="10dp"
@@ -47,7 +49,8 @@
                 android:gravity="center"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="6sp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +58,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -72,13 +76,15 @@
                             android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:padding="10dp"
                             android:hint="@string/edittext_hint_username" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -94,7 +100,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/edittext_hint_password"/>
+                            android:hint="@string/edittext_hint_password"
+                            android:padding="10dp"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <com.google.android.material.button.MaterialButton
