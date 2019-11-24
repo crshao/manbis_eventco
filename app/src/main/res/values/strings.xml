@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">manbis_eventco</string>
+    <string name="edittext_hint_username"><font size = "10"></font>Username</string>
+    <string name="edittext_hint_password"><font size = "10"></font>Password</string>
+    <string name="Login"><font size = "8"></font> Login</string>
 </resources>
