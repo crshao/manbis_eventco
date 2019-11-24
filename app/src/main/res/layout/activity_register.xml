@@ -145,7 +145,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -167,7 +167,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textColor="@color/colorPrimary"
             android:text="@string/Login"
-            app:cornerRadius="10dp"
+            app:cornerRadius="10dp"/>
 
     </LinearLayout>
 
