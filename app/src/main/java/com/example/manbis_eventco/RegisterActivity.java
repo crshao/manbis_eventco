@@ -55,9 +55,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putString(newUser + newPass + "data", newUser + "\n" + newPhone + "\n" + newEmail);
+//        editor.putString(newUser + newPass + "data", newUser + "\n" + newPhone + "\n" + newEmail);
+        editor.putString("username", newUser);
+        editor.putString("password", newPass);
+        editor.putString("phone", newPhone);
+        editor.putString("email", newEmail);
         editor.apply();
-        editor.commit();
 
         Toast.makeText(this, "Registration Successful.", Toast.LENGTH_LONG).show();
 

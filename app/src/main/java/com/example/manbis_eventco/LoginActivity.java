@@ -46,7 +46,11 @@ public class LoginActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
 
-        String userDetail = sharedPreferences.getString(user + pass + "data", "Username or Password is incorrect");
+//        String userDetail = sharedPreferences.getString(user + pass + "data", "Username or Password is incorrect");
+
+        //DIPAKAI JIKA INGIN MEMASTIKAN USER SUDAH TERDAFTAR, SEMENTARA TIDAK DIPAKAI
+        String nameCompare = sharedPreferences.getString("username", "");
+        String passwordCompare = sharedPreferences.getString("password", "");
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.apply();
 
