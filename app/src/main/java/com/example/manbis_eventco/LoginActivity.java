@@ -2,6 +2,7 @@ package com.example.manbis_eventco;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import android.content.Intent;
@@ -34,10 +35,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
     }
 
     @OnClick(R.id.btn_login)
-    void login()
+    public void login(View view)
     {
         String user = username.getEditText().getText().toString();
         String pass = password.getEditText().getText().toString();
@@ -46,9 +48,14 @@ public class LoginActivity extends AppCompatActivity {
 
         String userDetail = sharedPreferences.getString(user + pass + "data", "Username or Password is incorrect");
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.apply();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
-    public void register(View v)
+    public void register(View view)
     {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
