@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10sp"
-                    android:text="@string/Login"/>
+                    android:text="@string/Login_btn"/>
             </LinearLayout>
         </LinearLayout>
         <com.google.android.material.textview.MaterialTextView
