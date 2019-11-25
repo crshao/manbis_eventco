@@ -8,4 +8,17 @@
     <string name="Music_Concert">Music Concert</string>
     <string name="Birthday_Party">Birthday Party</string>
     <string name="Talk_Show">Talk Show</string>
-</resources>
+
+    <string-array name = "vendorList">
+        <item>Venue</item>
+        <item>Catering</item>
+        <item>Decoration and Lighting</item>
+        <item>Invitation Card</item>
+        <item>Photography and Videography</item>
+        <item>Attire and Dress</item>
+        <item>Hair and Makeup</item>
+        <item>Photobooth</item>
+        <item>Entertainment</item>
+    </string-array>
+
+            </resources>
