@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
-        <activity android:name=".List_Vendor" android:exported="true">
-        </activity>
+        <activity android:name=".Filter_Vendor"
+            android:exported="true"></activity>
+        <activity
+            android:name=".List_Vendor"
+            android:exported="true"></activity>
         <activity android:name=".EventList" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">

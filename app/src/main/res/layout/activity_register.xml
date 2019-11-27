@@ -151,7 +151,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/edittext_hint_password"/>
+                            android:hint="@string/edittext_hint_password"
+                            android:inputType="textPassword"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <com.google.android.material.button.MaterialButton

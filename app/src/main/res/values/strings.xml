@@ -9,7 +9,7 @@
     <string name="Birthday_Party">Birthday Party</string>
     <string name="Talk_Show">Talk Show</string>
 
-    <string-array name = "vendorList">
+    <string-array name="vendorList">
         <item>Venue</item>
         <item>Catering</item>
         <item>Decoration and Lighting</item>
@@ -21,4 +21,4 @@
         <item>Entertainment</item>
     </string-array>
 
-            </resources>
+</resources>
