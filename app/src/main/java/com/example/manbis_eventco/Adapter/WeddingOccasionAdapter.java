@@ -37,7 +37,7 @@ public class WeddingOccasionAdapter extends RecyclerView.Adapter<WeddingOccasion
     @Override
     public void onBindViewHolder(@NonNull WeddingOccasionViewHolder holder, int position) {
         WeddingOccasion weddingOccasion = list.get(position);
-        holder.jenis_layanan.setText(weddingOccasion.getName());
+        holder.jenisLayanan.setText(weddingOccasion.getName());
     }
 
     @Override
@@ -46,12 +46,13 @@ public class WeddingOccasionAdapter extends RecyclerView.Adapter<WeddingOccasion
     }
 
     public class WeddingOccasionViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.jenis_layanan)
-        MaterialTextView jenis_layanan;
+
+        MaterialTextView jenisLayanan;
 
         public WeddingOccasionViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(itemView);
+            //MENGAPA TIDAK BISA PAKAI BUTTERKNIFE DISINI ?
+            jenisLayanan = itemView.findViewById(R.id.jenis_layanan);
         }
     }
 }

@@ -23,8 +23,9 @@ public class EventList extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_wedding)
-    public void intent()
+    public void move()
     {
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, ListVendor.class);
+        startActivity(intent);
     }
 }

@@ -12,10 +12,10 @@
         <activity android:name=".FilterResult"
             android:exported="true"></activity>
         <activity
-            android:name=".Filter_Vendor"
+            android:name=".FilterVendor"
             android:exported="true" />
         <activity
-            android:name=".List_Vendor"
+            android:name=".ListVendor"
             android:exported="true" />
         <activity android:name=".EventList" />
         <activity android:name=".RegisterActivity" />
