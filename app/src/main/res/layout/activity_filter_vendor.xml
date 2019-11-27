@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FilterVendor"
-    android:background="@color/background">
+    tools:context=".Filter_Vendor"
+    android:background="@drawable/background_1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
