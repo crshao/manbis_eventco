@@ -1,12 +1,11 @@
 package com.example.manbis_eventco.Data;
 
-public class Venue {
+public class Decoration {
 
-    public String name;
-    public String desc;
-    public String address;
-    public String price;
-    public int image;
+    private String name;
+    private String price;
+    private String desc;
+    private int image;
 
     public String getName() {
         return name;
@@ -16,28 +15,20 @@ public class Venue {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getPrice() {
         return price;
     }
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public int getImage() {
