@@ -21,13 +21,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Nama Vendor"/>
-            <ImageView
+            <androidx.viewpager.widget.ViewPager
                 android:id="@+id/image_vendor"
                 android:layout_margintop ="20dp"
                 android:layout_width="350dp"
                 android:layout_height="250dp"
-                android:layout_below="@id/nama_vendor"
-                android:src="@color/black"/>
+                android:layout_below="@id/nama_vendor"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
