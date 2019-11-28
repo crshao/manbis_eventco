@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_login2"
-    tools:context=".List_Vendor"
+    tools:context=".ListVendor"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -40,8 +40,6 @@
             android:background="@drawable/rounded_background"
             android:backgroundTint="@color/pink"
             tools:listitem="@layout/item_row_wedding_occasion" />
-
-
     </RelativeLayout>
 
     <RelativeLayout
