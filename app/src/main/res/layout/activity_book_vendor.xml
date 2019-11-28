@@ -22,6 +22,7 @@
                 android:layout_margin="5dp"
                 android:text="Nama Vendor"/>
             <ImageView
+                android:id="@+id/image_vendor"
                 android:layout_margintop ="20dp"
                 android:layout_width="350dp"
                 android:layout_height="250dp"

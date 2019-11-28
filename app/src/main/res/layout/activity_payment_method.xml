@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Filter_Vendor"
+    android:background="@drawable/background_1">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="60dp"
+        android:background="@color/pink"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="List_Vendor"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+            <RelativeLayout
+                android:id="@+id/layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp">
+
+                <ImageView
+                    android:id="@+id/logo_money1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_attach_money_filter_color_24dp"
+                    android:layout_centerVertical="true"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/BankTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money1"
+                    android:text="Bank Transfer"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/BankList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money1"
+                    android:layout_below="@+id/BankTransfer"
+                    android:background="@color/background"
+                    android:paddingLeft="5dp"
+                    android:text="Mandiri, BCA , BNI , BRI"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_location"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/logo_money2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_attach_money_filter_color_24dp" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/CreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money2"
+                    android:text="Credit Card"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/CreditCardList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money2"
+                    android:layout_below="@+id/CreditCard"
+                    android:background="@color/background"
+                    android:paddingLeft="5dp"
+                    android:text="Jenius, PayPal, Flazz, Visa"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/budget_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_date"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/logo_money3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_attach_money_filter_color_24dp" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ATM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money3"
+                    android:text="ATM"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ATMList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money3"
+                    android:layout_below="@+id/ATM"
+                    android:background="@color/background"
+                    android:paddingLeft="5dp"
+                    android:text="Mandiri, BCA , BNI , BRI"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budget_layout"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/logo_money4"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_attach_money_filter_color_24dp" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/Cashier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money4"
+                    android:text="Filter"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/CashierList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/logo_money4"
+                    android:layout_below="@+id/Cashier"
+                    android:background="@color/background"
+                    android:paddingLeft="5dp"
+                    android:text="Mandiri, BCA , BNI , BRI"
+                    android:fontFamily="@font/opensanslight"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:letterSpacing="0.1"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
