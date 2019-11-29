@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class FilterResult extends AppCompatActivity {
 
     //SEMENTARA ARRAYLIST VENUE, KARENA BELUM BELAJAR GENERIC DATA TYPE
-    private ArrayList<Venue> list;
+    private ArrayList<Venue> list = new ArrayList<>();
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
 
