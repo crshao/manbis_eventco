@@ -7,6 +7,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.manbis_eventco.Adapter.WeddingOccasionAdapter;
 import com.example.manbis_eventco.Data.WeddingOccasion;
@@ -20,6 +21,9 @@ public class FilterVendor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter_vendor);
+        Bundle bundle = getIntent().getExtras();
+        String data = bundle.getString("data");
 
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
     }
 }

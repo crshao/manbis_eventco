@@ -51,7 +51,7 @@ public class ListVendor extends AppCompatActivity {
 
     private void showRecyclerList() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        WeddingOccasionAdapter weddingOccasionAdapter = new WeddingOccasionAdapter(list);
+        WeddingOccasionAdapter weddingOccasionAdapter = new WeddingOccasionAdapter(list, this);
         recyclerView.setAdapter(weddingOccasionAdapter);
     }
 }
