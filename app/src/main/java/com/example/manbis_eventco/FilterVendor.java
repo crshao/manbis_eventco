@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -25,5 +26,8 @@ public class FilterVendor extends AppCompatActivity {
         String data = bundle.getString("data");
 
         Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, FilterResult.class);
+        intent.putExtra("data", data);
+        startActivity(intent);
     }
 }
