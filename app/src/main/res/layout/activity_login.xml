@@ -71,12 +71,14 @@
                         android:layout_height="wrap_content"
                         app:boxStrokeColor="@color/colorPrimary"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
-                            android:hint="@string/edittext_hint_username" />
+                            android:hint="@string/edittext_hint_username"
+                            android:inputType="textPersonName"
+                            android:padding="10dp" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <LinearLayout
