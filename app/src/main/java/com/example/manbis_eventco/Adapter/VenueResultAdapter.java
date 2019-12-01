@@ -71,7 +71,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
 //                Toast.makeText(context, venue.getName(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, BookVendor.class);
                 intent.putExtra("occasion", test);
-                intent.putExtra("data", venue.getName());
+                intent.putExtra("data", position);
                 context.startActivity(intent);
             });
         }
