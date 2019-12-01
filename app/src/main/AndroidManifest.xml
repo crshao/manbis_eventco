@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
-        <activity android:name=".VenueDetail"></activity>
+        <activity android:name=".VenueDetail" />
         <activity android:name=".ListVenueResult" />
         <activity android:name=".FiturPayment" />
         <activity android:name=".PaymentMethod" />
