@@ -7,6 +7,15 @@ public class Photography {
     private String desc;
     private String phoneNum;
     private String address;
+    private int images;
+
+    public int getImages() {
+        return images;
+    }
+
+    public void setImages(int images) {
+        this.images = images;
+    }
 
     public String getName() {
         return name;

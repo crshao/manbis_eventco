@@ -1,5 +1,7 @@
 package com.example.manbis_eventco.Data;
 
+import com.example.manbis_eventco.R;
+
 import java.util.ArrayList;
 
 public class PhotoboothData {
@@ -31,7 +33,9 @@ public class PhotoboothData {
     };
 
     private static int images[] = {
-
+            R.drawable.photobooth_lolphotobooth,
+            R.drawable.photobooth_iphotobooth,
+            R.drawable.photobooth_printboothindonesia
     };
 
     public static ArrayList<Photobooth> getPhotoboohData()
@@ -42,7 +46,7 @@ public class PhotoboothData {
             photobooth.setName(name[i]);
             photobooth.setDesc(desc[i]);
             photobooth.setPrice(price[i]);
-            // photobooth.setImage(images[i]);
+            photobooth.setImages(images[i]);
 
             list_photobooth.add(photobooth);
         }
