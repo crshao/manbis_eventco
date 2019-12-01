@@ -6,21 +6,21 @@ import java.util.ArrayList;
 
 public class DecorationData {
 
-    private static String name[] = {
+    private static String[] name = {
             "SilverDust Decor",
             "Eden Design",
             "Elior Design",
             "Aplus Decor"
     };
 
-    private static String price[] = {
+    private static String[] price = {
             "120.000.000",
             "150.000.000",
             "45.000.000",
             "30.000.000"
     };
 
-    private static String desc[] = {
+    private static String[] desc = {
             "registration table set ( console table, 5 photo frames, simple flower arrangements) \n" +
                     "1 set bridal table (6pax) \n" +
                     "guest table set (optional) \n" +
@@ -48,7 +48,7 @@ public class DecorationData {
                     "\n"
     };
 
-    private static int images[] = {
+    private static int[] images = {
             R.drawable.decoration_silverdust,
             R.drawable.decoration_edendesign,
             R.drawable.decoration_elior,

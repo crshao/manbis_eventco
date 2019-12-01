@@ -58,13 +58,10 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
             price = itemView.findViewById(R.id.tv2);
             gbr = itemView.findViewById(R.id.img_view);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    Venue venue = list.get(position);
-                    Toast.makeText(context, venue.getName(), Toast.LENGTH_SHORT).show();
-                }
+            itemView.setOnClickListener(v -> {
+                int position = getAdapterPosition();
+                Venue venue = list.get(position);
+                Toast.makeText(context, venue.getName(), Toast.LENGTH_SHORT).show();
             });
         }
     }

@@ -32,13 +32,13 @@ public class PhotoboothData {
             "unlimited print photos | free design template photo | include 3 crew with smartphones | internet network | photo paper 4R with thermal printer | soft file inside goodie bag with Flashdisk on the spot/same day service | free social media promo | cute hat properties"
     };
 
-    private static int images[] = {
+    private static int[] images = {
             R.drawable.photobooth_lolphotobooth,
             R.drawable.photobooth_iphotobooth,
             R.drawable.photobooth_printboothindonesia
     };
 
-    public static ArrayList<Photobooth> getPhotoboohData()
+    public static ArrayList<Photobooth> getPhotoboothData()
     {
         ArrayList<Photobooth>list_photobooth = new ArrayList<>();
         for (int i = 0; i < name.length; i++) {
