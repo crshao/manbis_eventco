@@ -90,6 +90,8 @@ public class FilterResult extends AppCompatActivity {
     private void showEntertainment(ArrayList<Entertainment> listEntertainment) {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         EntertainmentResultAdapter entertainmentResultAdapter = new EntertainmentResultAdapter(listEntertainment,this);
         recyclerView.setAdapter(entertainmentResultAdapter);
 
@@ -98,6 +100,8 @@ public class FilterResult extends AppCompatActivity {
     private void showPhotobooth(ArrayList<Photobooth> listPhotobooth) {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         PhotoboothResultAdapter photoboothResultAdapter = new PhotoboothResultAdapter(listPhotobooth,this);
         recyclerView.setAdapter(photoboothResultAdapter);
     }
@@ -105,6 +109,8 @@ public class FilterResult extends AppCompatActivity {
     private void showPhotography(ArrayList<Photography> listPhotography) {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         PhotographyResultAdapter photographyResultAdapter = new PhotographyResultAdapter(listPhotography,this);
         recyclerView.setAdapter(photographyResultAdapter);
 
@@ -113,6 +119,8 @@ public class FilterResult extends AppCompatActivity {
     private void showDecoration(ArrayList<Decoration> listDecoration) {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         DecorationResultAdapter decorationResultAdapter = new DecorationResultAdapter(listDecoration,this);
         recyclerView.setAdapter(decorationResultAdapter);
 
@@ -121,12 +129,16 @@ public class FilterResult extends AppCompatActivity {
     public void showVenue(ArrayList<Venue> listVenue)
     {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         VenueResultAdapter venueResultAdapter = new VenueResultAdapter(listVenue,this);
         recyclerView.setAdapter(venueResultAdapter);
     }
 
     public void showCatering(ArrayList<Catering> listCatering){
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecycleViewSpacing itemDecoration = new RecycleViewSpacing(20);
+        recyclerView.addItemDecoration(itemDecoration);
         CateringResultAdapter cateringResultAdapter = new CateringResultAdapter(listCatering,this);
         recyclerView.setAdapter(cateringResultAdapter);
     }
