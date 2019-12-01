@@ -1,12 +1,14 @@
 package com.example.manbis_eventco.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.manbis_eventco.BookVendor;
 import com.example.manbis_eventco.Data.Photobooth;
 import com.example.manbis_eventco.Data.Photography;
 import com.example.manbis_eventco.R;
@@ -20,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyResultAdapter.ViewHolder> {
     private ArrayList<Photography> list;
     private Context context;
+    String test;
 
     public PhotographyResultAdapter(ArrayList<Photography> list, Context context) {
         this.list = list;
@@ -29,6 +32,7 @@ public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyRe
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        test = "Photography";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
@@ -62,6 +66,11 @@ public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyRe
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     Photography photography = list.get(position);
+
+                    Intent intent = new Intent(context, BookVendor.class);
+                    intent.putExtra("occasion", test);
+                    intent.putExtra("data", photography.getName());
+                    context.startActivity(intent);
                 }
             });
         }

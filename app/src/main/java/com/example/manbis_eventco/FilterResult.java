@@ -72,7 +72,7 @@ public class FilterResult extends AppCompatActivity {
                 showPhotography(listPhotography);
                 break;
             case "Photobooth" :
-                ArrayList<Photobooth> listPhotobooth = new ArrayList<Photobooth>();
+                ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
                 listPhotobooth.addAll(PhotoboothData.getPhotoboothData());
                 showPhotobooth(listPhotobooth);
                 break;

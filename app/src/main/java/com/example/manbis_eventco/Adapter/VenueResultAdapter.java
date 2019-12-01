@@ -1,12 +1,15 @@
 package com.example.manbis_eventco.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.manbis_eventco.BookVendor;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.R;
 import com.google.android.material.textview.MaterialTextView;
@@ -21,6 +24,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
 
     private ArrayList<Venue> list;
     private Context context;
+    private String test;
 
     public VenueResultAdapter(ArrayList<Venue> list,Context context) {
         this.context = context;
@@ -30,6 +34,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        test = "Venue";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
@@ -40,6 +45,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
         holder.judul.setText(venue.getName());
         holder.price.setText(venue.getPrice());
         holder.gbr.setImageResource(venue.getImage());
+
     }
 
 
@@ -62,7 +68,11 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
                 Venue venue = list.get(position);
-                Toast.makeText(context, venue.getName(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, venue.getName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, BookVendor.class);
+                intent.putExtra("occasion", test);
+                intent.putExtra("data", position);
+                context.startActivity(intent);
             });
         }
     }

@@ -1,11 +1,13 @@
 package com.example.manbis_eventco.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.manbis_eventco.BookVendor;
 import com.example.manbis_eventco.Data.Entertainment;
 import com.example.manbis_eventco.R;
 import com.google.android.material.textview.MaterialTextView;
@@ -19,6 +21,7 @@ public class EntertainmentResultAdapter extends RecyclerView.Adapter<Entertainme
 
     private ArrayList<Entertainment> list;
     private Context context;
+    String test;
 
     public EntertainmentResultAdapter(ArrayList<Entertainment> list, Context context) {
         this.list = list;
@@ -28,6 +31,7 @@ public class EntertainmentResultAdapter extends RecyclerView.Adapter<Entertainme
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        test = "Entertainment";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
@@ -62,7 +66,10 @@ public class EntertainmentResultAdapter extends RecyclerView.Adapter<Entertainme
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     Entertainment entertainment = list.get(position);
-
+                    Intent intent = new Intent(context, BookVendor.class);
+                    intent.putExtra("occasion", test);
+                    intent.putExtra("data", entertainment.getName());
+                    context.startActivity(intent);
                 }
             });
         }

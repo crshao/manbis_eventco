@@ -1,6 +1,7 @@
 package com.example.manbis_eventco.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.MergeCursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.manbis_eventco.BookVendor;
 import com.example.manbis_eventco.Data.Catering;
 import com.example.manbis_eventco.R;
 import com.google.android.material.textview.MaterialTextView;
@@ -21,6 +23,7 @@ public class CateringResultAdapter extends RecyclerView.Adapter<CateringResultAd
 
     private ArrayList<Catering> list;
     private Context context;
+    String test;
 
     public CateringResultAdapter(ArrayList<Catering> list, Context context) {
         this.list = list;
@@ -31,10 +34,9 @@ public class CateringResultAdapter extends RecyclerView.Adapter<CateringResultAd
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        test = "Catering";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result,parent,false);
         return new ViewHolder(view);
-
-
     }
 
     @Override
@@ -66,7 +68,11 @@ public class CateringResultAdapter extends RecyclerView.Adapter<CateringResultAd
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     Catering catering = list.get(position);
-                    Toast.makeText(context, catering.getName(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, catering.getName(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, BookVendor.class);
+                    intent.putExtra("occasion", test);
+                    intent.putExtra("data", catering.getName());
+                    context.startActivity(intent);
                 }
             });
 

@@ -47,7 +47,7 @@ public class EntertainmentData {
                 entertainment.setName(name[i]);
                 entertainment.setDesc(desc[i]);
                 entertainment.setPrice(price[i]);
-                 entertainment.setImage(images[i]);
+                entertainment.setImage(images[i]);
 
             list_venue.add(entertainment);
         }
