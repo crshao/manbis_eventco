@@ -52,31 +52,35 @@ public class FilterResult extends AppCompatActivity {
         switch(data)
         {
             case "Venue":
-                ArrayList<Venue> listVenue = new ArrayList<>();
+                ArrayList<Venue> listVenue = new ArrayList<Venue>();
                 listVenue.addAll(VenueData.getVenueData());
                 showVenue(listVenue);
                 break;
             case "Catering":
-                ArrayList<Catering> listCatering = new ArrayList<>();
+                ArrayList<Catering> listCatering = new ArrayList<Catering>();
                 listCatering.addAll(CateringData.getCateringData());
                 showCatering(listCatering);
                 break;
             case "Decoration & Lighting" :
-                ArrayList<Decoration> listDecoration = new ArrayList<>();
+                ArrayList<Decoration> listDecoration = new ArrayList<Decoration>();
                 listDecoration.addAll(DecorationData.getDecorationData());
                 showDecoration(listDecoration);
+                break;
             case "Photography & Videography" :
-                ArrayList<Photography> listPhotography = new ArrayList<>();
+                ArrayList<Photography> listPhotography = new ArrayList<Photography>();
                 listPhotography.addAll(PhotographyData.getPhotographyData());
                 showPhotography(listPhotography);
+                break;
             case "Photobooth" :
                 ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
                 listPhotobooth.addAll(PhotoboothData.getPhotoboothData());
                 showPhotobooth(listPhotobooth);
+                break;
             case "Entertainment" :
-                ArrayList<Entertainment> listEntertainment = new ArrayList<>();
+                ArrayList<Entertainment> listEntertainment = new ArrayList<Entertainment>();
                 listEntertainment.addAll(EntertainmentData.getEntertainmentData());
                 showEntertainment(listEntertainment);
+                break;
             default:
                 System.out.println("MASUK KE DEFAULT");
                 break;

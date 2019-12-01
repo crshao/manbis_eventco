@@ -48,6 +48,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
 
     }
 
+
     @Override
     public int getItemCount() {
         return list.size();
