@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.manbis_eventco.Adapter.VenueResultAdapter;
+import com.example.manbis_eventco.Adapter.ViewPagerAdapter;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.Data.VenueData;
 import com.google.android.material.button.MaterialButton;
@@ -40,6 +41,10 @@ public class BookVendor extends AppCompatActivity {
         int data = bundle.getInt("data");
         String occasion = bundle.getString("occasion");
         Toast.makeText(this, occasion, Toast.LENGTH_LONG).show();
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+
+        view_pager.setAdapter(viewPagerAdapter);
 
         switch(occasion)
         {
