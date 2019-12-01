@@ -47,7 +47,7 @@ public class CateringResultAdapter extends RecyclerView.Adapter<CateringResultAd
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

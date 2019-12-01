@@ -1,5 +1,7 @@
 package com.example.manbis_eventco.Data;
 
+import com.example.manbis_eventco.R;
+
 import java.util.ArrayList;
 
 public class CateringData {
@@ -36,8 +38,12 @@ public class CateringData {
             "Jl. Simo Tambaan Sekolahan No.99 A, Simomulyo, Kec. Sukomanunggal"
     };
 
-    private static int image [] = {
-
+    private static int images [] = {
+            R.drawable.catering_aisya,
+            R.drawable.catering_bintang,
+            R.drawable.catering_marga,
+            R.drawable.catering_jaya,
+            R.drawable.catering_ra
     };
 
     public static ArrayList<Catering> getCateringData()
@@ -49,7 +55,7 @@ public class CateringData {
             catering.setPhonenum(phoneNum[i]);
             catering.setPrice(price[i]);
             catering.setAddress(address[i]);
-            //catering.setImage(images[i]);
+            catering.setImage(images[i]);
 
             list_catering.add(catering);
         }

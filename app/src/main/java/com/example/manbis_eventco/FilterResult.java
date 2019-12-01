@@ -1,5 +1,6 @@
 package com.example.manbis_eventco;
 
+import androidx.annotation.ArrayRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,10 +10,26 @@ import butterknife.ButterKnife;
 import android.os.Bundle;
 import android.renderscript.Type;
 
+import com.example.manbis_eventco.Adapter.CateringResultAdapter;
+import com.example.manbis_eventco.Adapter.DecorationResultAdapter;
+import com.example.manbis_eventco.Adapter.EntertainmentResultAdapter;
+import com.example.manbis_eventco.Adapter.PhotoboothResultAdapter;
+import com.example.manbis_eventco.Adapter.PhotographerResultAdapter;
 import com.example.manbis_eventco.Adapter.VenueResultAdapter;
+import com.example.manbis_eventco.Data.Catering;
+import com.example.manbis_eventco.Data.CateringData;
+import com.example.manbis_eventco.Data.Decoration;
+import com.example.manbis_eventco.Data.DecorationData;
+import com.example.manbis_eventco.Data.Entertainment;
+import com.example.manbis_eventco.Data.EntertainmentData;
+import com.example.manbis_eventco.Data.Photobooth;
+import com.example.manbis_eventco.Data.PhotoboothData;
+import com.example.manbis_eventco.Data.Photography;
+import com.example.manbis_eventco.Data.PhotographyData;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.Data.VenueData;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class FilterResult extends AppCompatActivity {
@@ -40,21 +57,77 @@ public class FilterResult extends AppCompatActivity {
             case "Venue":
                 ArrayList<Venue> listVenue = new ArrayList<>();
                 listVenue.addAll(VenueData.getVenueData());
-                showVenue();
+                showVenue(listVenue);
                 break;
             case "Catering":
-
+                ArrayList<Catering> listCatering = new ArrayList<>();
+                listCatering.addAll(CateringData.getCateringData());
+                showCatering(listCatering);
                 break;
+            case "Decoration & Lighting" :
+                ArrayList<Decoration> listDecoration = new ArrayList<>();
+                listDecoration.addAll(DecorationData.getDecorationData());
+                showDecoration(listDecoration);
+            case "Photography & Videography" :
+                ArrayList<Photography> listPhotography = new ArrayList<>();
+                listPhotography.addAll(PhotographyData.getPhotographyData());
+                showPhotography(listPhotography);
+            case "Photobooth" :
+                ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
+                listPhotobooth.addAll(PhotoboothData.getPhotoboohData());
+                showPhotobooth(listPhotobooth);
+            case "Entertainment" :
+                ArrayList<Entertainment> listEntertainment = new ArrayList<>();
+                listEntertainment.addAll(EntertainmentData.getEntertainmentData());
+                showEntertainment(listEntertainment);
             default:
                 System.out.println("MASUK KE DEFAULT");
                 break;
         }
     }
 
-    public void showVenue()
+    private void showEntertainment(ArrayList<Entertainment> listEntertainment) {
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        EntertainmentResultAdapter entertainmentResultAdapter = new EntertainmentResultAdapter(listEntertainment,this);
+        recyclerView.setAdapter(entertainmentResultAdapter);
+
+    }
+
+    private void showPhotobooth(ArrayList<Photobooth> listPhotobooth) {
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        PhotoboothResultAdapter photoboothResultAdapter = new PhotoboothResultAdapter(listPhotobooth,this);
+        recyclerView.setAdapter(photoboothResultAdapter);
+    }
+
+    private void showPhotography(ArrayList<Photography> listPhotography) {
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        PhotographerResultAdapter photographerResultAdapter = new PhotographerResultAdapter(listPhotography,this);
+        recyclerView.setAdapter(photographerResultAdapter);
+
+    }
+
+    private void showDecoration(ArrayList<Decoration> listDecoration) {
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        DecorationResultAdapter decorationResultAdapter = new DecorationResultAdapter(listDecoration,this);
+        recyclerView.setAdapter(decorationResultAdapter);
+
+    }
+
+    public void showVenue(ArrayList<Venue> listVenue)
     {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        VenueResultAdapter venueResultAdapter = new VenueResultAdapter(this, list);
+        VenueResultAdapter venueResultAdapter = new VenueResultAdapter(listVenue,this);
         recyclerView.setAdapter(venueResultAdapter);
     }
+
+    public void showCatering(ArrayList<Catering> listCatering){
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        CateringResultAdapter cateringResultAdapter = new CateringResultAdapter(listCatering,this);
+        recyclerView.setAdapter(cateringResultAdapter);
+    }
+
 }

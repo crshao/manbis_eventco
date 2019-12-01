@@ -1,5 +1,7 @@
 package com.example.manbis_eventco.Data;
 
+import com.example.manbis_eventco.R;
+
 import java.util.ArrayList;
 
 public class DecorationData {
@@ -47,7 +49,10 @@ public class DecorationData {
     };
 
     private static int images[] = {
-
+            R.drawable.decoration_silverdust,
+            R.drawable.decoration_edendesign,
+            R.drawable.decoration_elior,
+            R.drawable.decoration_aplus
     };
 
     public static ArrayList<Decoration> getDecorationData()
@@ -58,7 +63,7 @@ public class DecorationData {
             decoration.setName(name[i]);
             decoration.setDesc(desc[i]);
             decoration.setPrice(price[i]);
-            //decoration.setImage(images[i]);
+            decoration.setImage(images[i]);
 
             list_decor.add(decoration);
         }

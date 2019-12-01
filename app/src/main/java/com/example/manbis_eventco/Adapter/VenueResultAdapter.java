@@ -22,7 +22,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
     private ArrayList<Venue> list;
     private Context context;
 
-    public VenueResultAdapter(Context context, ArrayList<Venue> list) {
+    public VenueResultAdapter(ArrayList<Venue> list,Context context) {
         this.context = context;
         this.list = list;
     }
