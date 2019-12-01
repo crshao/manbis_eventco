@@ -71,7 +71,7 @@ public class FilterResult extends AppCompatActivity {
                 showPhotography(listPhotography);
             case "Photobooth" :
                 ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
-                listPhotobooth.addAll(PhotoboothData.getPhotoboohData());
+                listPhotobooth.addAll(PhotoboothData.getPhotoboothData());
                 showPhotobooth(listPhotobooth);
             case "Entertainment" :
                 ArrayList<Entertainment> listEntertainment = new ArrayList<>();
