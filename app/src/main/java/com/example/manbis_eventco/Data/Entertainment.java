@@ -7,11 +7,11 @@ public class Entertainment {
     private String price;
     private String desc;
 
-    public String getNama() {
+    public String getName() {
         return name;
     }
 
-    public void setNama(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -1,12 +1,14 @@
 package com.example.manbis_eventco.Adapter;
 
 import android.content.Context;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.manbis_eventco.Data.Photobooth;
+import com.example.manbis_eventco.Data.Photography;
 import com.example.manbis_eventco.R;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -15,30 +17,28 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class PhotoboothResultAdapter extends RecyclerView.Adapter<PhotoboothResultAdapter.ViewHolder> {
-
-    private ArrayList<Photobooth> list;
+public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyResultAdapter.ViewHolder> {
+    private ArrayList<Photography> list;
     private Context context;
 
-    public PhotoboothResultAdapter(ArrayList<Photobooth> list, Context context) {
+    public PhotographyResultAdapter(ArrayList<Photography> list, Context context) {
         this.list = list;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Photobooth photobooth = list.get(position);
-        holder.judul.setText(photobooth.getName());
-        holder.price.setText(photobooth.getPrice());
-        holder.gbr.setImageResource(photobooth.getImages());
+        Photography photography = list.get(position);
+        holder.judul.setText(photography.getName());
+        holder.price.setText(photography.getPrice());
+        holder.gbr.setImageResource(photography.getImages());
     }
 
     @Override
@@ -61,7 +61,7 @@ public class PhotoboothResultAdapter extends RecyclerView.Adapter<PhotoboothResu
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    Photobooth photobooth = list.get(position);
+                    Photography photography = list.get(position);
                 }
             });
         }

@@ -1,6 +1,5 @@
 package com.example.manbis_eventco;
 
-import androidx.annotation.ArrayRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,13 +7,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import android.os.Bundle;
-import android.renderscript.Type;
 
 import com.example.manbis_eventco.Adapter.CateringResultAdapter;
 import com.example.manbis_eventco.Adapter.DecorationResultAdapter;
 import com.example.manbis_eventco.Adapter.EntertainmentResultAdapter;
 import com.example.manbis_eventco.Adapter.PhotoboothResultAdapter;
-import com.example.manbis_eventco.Adapter.PhotographerResultAdapter;
+import com.example.manbis_eventco.Adapter.PhotographyResultAdapter;
 import com.example.manbis_eventco.Adapter.VenueResultAdapter;
 import com.example.manbis_eventco.Data.Catering;
 import com.example.manbis_eventco.Data.CateringData;
@@ -29,7 +27,6 @@ import com.example.manbis_eventco.Data.PhotographyData;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.Data.VenueData;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class FilterResult extends AppCompatActivity {
@@ -104,8 +101,8 @@ public class FilterResult extends AppCompatActivity {
     private void showPhotography(ArrayList<Photography> listPhotography) {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        PhotographerResultAdapter photographerResultAdapter = new PhotographerResultAdapter(listPhotography,this);
-        recyclerView.setAdapter(photographerResultAdapter);
+        PhotographyResultAdapter photographyResultAdapter = new PhotographyResultAdapter(listPhotography,this);
+        recyclerView.setAdapter(photographyResultAdapter);
 
     }
 

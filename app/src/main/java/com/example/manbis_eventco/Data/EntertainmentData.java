@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class EntertainmentData {
 
-    private static String name[] = {
+    private static String[] name = {
             "Malik Music Entertainment",
             "Prime Master of Ceremonies",
             "Party Band GoldStone",
@@ -14,7 +14,7 @@ public class EntertainmentData {
             "Night Flight Music"
     };
 
-    private static String price[] = {
+    private static String[] price = {
             "2.000.000",
             "1.500.000",
             "3.250.000",
@@ -22,7 +22,7 @@ public class EntertainmentData {
             "4.000.000"
     };
 
-    private static String desc[] = {
+    private static String[] desc = {
             "Live music will set the tone for any event. Perhaps it’s a band ,acoustic, mini orchestra and orchestra for your wedding, or a violin for your process entrance, or maybe a harpist for your private party and etc. Whatever the event, you will find talented musicians right here on Malik Entertainment.",
             "Master of Ceremonies (MC or emcee) is the host of your wedding and should make sure everyone is having a good time. A good wedding MC is more than someone who is good at public speaking or can tell a few jokes. They should make sure everything runs smoothly and introduce each person who is speaking, as well as important events.",
             "Forget about cheesy top 40 party covers bands and take your event to the next level with our all female band. Providing an amazing live music entertainment option, our corporate party band puts on a 100% live concert your guests won't forget. A one of a kind female party band, Goldstone party band brings you the very best talent London has to offer.",
@@ -44,7 +44,7 @@ public class EntertainmentData {
         ArrayList<Entertainment> list_venue = new ArrayList<>();
         for (int i = 0; i < name.length; i++) {
                 Entertainment entertainment = new Entertainment();
-                entertainment.setNama(name[i]);
+                entertainment.setName(name[i]);
                 entertainment.setDesc(desc[i]);
                 entertainment.setPrice(price[i]);
                  entertainment.setImage(images[i]);

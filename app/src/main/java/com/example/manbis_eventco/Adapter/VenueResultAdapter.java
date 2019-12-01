@@ -48,7 +48,6 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         MaterialTextView judul;
         MaterialTextView price;
         ImageView gbr;

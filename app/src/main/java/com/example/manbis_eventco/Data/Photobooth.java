@@ -7,35 +7,35 @@ public class Photobooth {
     private static String desc;
     private static int images;
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
+    public void setName(String name) {
         Photobooth.name = name;
     }
 
-    public static String getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public static void setPrice(String price) {
+    public void setPrice(String price) {
         Photobooth.price = price;
     }
 
-    public static String getDesc() {
+    public String getDesc() {
         return desc;
     }
 
-    public static void setDesc(String desc) {
+    public void setDesc(String desc) {
         Photobooth.desc = desc;
     }
 
-    public static int getImages() {
+    public int getImages() {
         return images;
     }
 
-    public static void setImages(int images) {
+    public void setImages(int images) {
         Photobooth.images = images;
     }
 }

@@ -6,19 +6,19 @@ import java.util.ArrayList;
 
 public class PhotoboothData {
 
-    private static String name[] ={
+    private static String[] name ={
             "Lolphotobooth.co",
             "iPhoto PhotoPrint",
             "PrintBooth Indonesia"
     };
 
-    private static String price[] = {
+    private static String[] price = {
             "6.000.000",
             "3.300.000",
             "3.500.000"
     };
 
-    private static String desc[] = {
+    private static String[] desc = {
             "1. 3 hours unlimited with 4R/2'x6' photo strip print with custom photo template, props and online soft copy access \n" +
                     "2. 5,5 hours unlimited with 4R/2'x6' photo strip print with custom photo template, props and online soft copy access\n",
             "All package include : \n" +
