@@ -42,6 +42,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
         holder.gbr.setImageResource(venue.getImage());
     }
 
+
     @Override
     public int getItemCount() {
         return list.size();
