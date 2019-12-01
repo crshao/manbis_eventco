@@ -8,7 +8,9 @@ import butterknife.ButterKnife;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.manbis_eventco.Adapter.VenueResultAdapter;
 import com.example.manbis_eventco.Data.Venue;
+import com.example.manbis_eventco.Data.VenueData;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -42,8 +44,11 @@ public class BookVendor extends AppCompatActivity {
         switch(occasion)
         {
             case "Venue":
-                ArrayList<Venue> list = 
-                Venue venue =
+                ArrayList<Venue> list = new ArrayList<>();
+                list.addAll(VenueData.getVenueData());
+                Venue venue = list.get(data);
+                nama_vendor.setText(venue.getName());
+                vendorDetails.setText(venue.getDesc());
                 break;
         }
 
