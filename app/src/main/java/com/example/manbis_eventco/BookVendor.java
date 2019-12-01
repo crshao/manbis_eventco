@@ -6,6 +6,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.manbis_eventco.Adapter.VenueResultAdapter;
@@ -22,8 +23,8 @@ public class BookVendor extends AppCompatActivity {
     @BindView(R.id.nama_vendor)
     MaterialTextView nama_vendor;
 
-    @BindView(R.id.view_pager)
-    ViewPager view_pager;
+    @BindView(R.id.img_view)
+    ImageView img_view;
 
     @BindView(R.id.vendorDetails)
     MaterialTextView vendorDetails;
@@ -40,11 +41,11 @@ public class BookVendor extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         int data = bundle.getInt("data");
         String occasion = bundle.getString("occasion");
-        Toast.makeText(this, occasion, Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, occasion, Toast.LENGTH_LONG).show();
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
-
-        view_pager.setAdapter(viewPagerAdapter);
+//        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+//
+//        view_pager.setAdapter(viewPagerAdapter);
 
         switch(occasion)
         {
@@ -54,6 +55,7 @@ public class BookVendor extends AppCompatActivity {
                 Venue venue = list.get(data);
                 nama_vendor.setText(venue.getName());
                 vendorDetails.setText(venue.getDesc());
+                img_view.setImageResource(venue.getImage());
                 break;
         }
 

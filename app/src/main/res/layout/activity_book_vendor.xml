@@ -21,8 +21,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Nama Vendor"/>
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager"
+            <ImageView
+                android:id="@+id/img_view"
                 android:layout_marginTop="20dp"
                 android:layout_width="350dp"
                 android:layout_height="250dp"
@@ -43,7 +43,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/book_button"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
