@@ -1,5 +1,7 @@
 package com.example.manbis_eventco.Data;
 
+import com.example.manbis_eventco.R;
+
 import java.util.ArrayList;
 
 public class VenueData {
@@ -58,6 +60,14 @@ public class VenueData {
             "Jalan Basuki Rahmat No. 67-73, Surabaya, Jawa Timur, 60271"
     };
 
+    public static int[][] image = {
+            {R.drawable.venue_jw1, R.drawable.venue_jw2, R.drawable.venue_jw3},
+            {R.drawable.venue_sheraton_1, R.drawable.venue_sheraton2, R.drawable.venue_sheraton3},
+            {R.drawable.venue_dyandra1, R.drawable.venue_dyandra2},
+            {R.drawable.venue_ciputra1, R.drawable.venue_ciputra2},
+            {R.drawable.venue_pullman1, R.drawable.venue_pullman2}
+    };
+
     //IMAGE BELUM
     public static ArrayList<Venue> getVenueData()
     {
@@ -68,6 +78,7 @@ public class VenueData {
             venue.setAddress(address[i]);
             venue.setDesc(desc[i]);
             venue.setPrice(price[i]);
+            venue.setImage(image[i][0]);
             list.add(venue);
         }
         return list;

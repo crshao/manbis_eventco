@@ -39,6 +39,7 @@ public class VenueResultAdapter extends RecyclerView.Adapter<VenueResultAdapter.
         Venue venue = list.get(position);
         holder.judul.setText(venue.getName());
         holder.price.setText(venue.getPrice());
+        holder.gbr.setImageResource(venue.getImage());
     }
 
     @Override

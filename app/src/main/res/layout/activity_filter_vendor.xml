@@ -66,11 +66,12 @@
                     android:layout_toRightOf="@+id/logo_location"
                     android:layout_below="@+id/Location_sub"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/background"
-                        android:textSize="12sp"/>
+                        android:textSize="8sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </RelativeLayout>
             <RelativeLayout
@@ -141,11 +142,13 @@
                     android:layout_toRightOf="@+id/logo_budget"
                     android:layout_below="@+id/budget_sub"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/background"
-                        android:textSize="12sp"/>
+                        android:inputType="number"
+                        android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </RelativeLayout>
             <RelativeLayout
