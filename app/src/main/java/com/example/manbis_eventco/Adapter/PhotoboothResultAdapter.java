@@ -68,7 +68,7 @@ public class PhotoboothResultAdapter extends RecyclerView.Adapter<PhotoboothResu
                     Photobooth photobooth = list.get(position);
                     Intent intent = new Intent(context, BookVendor.class);
                     intent.putExtra("occasion", test);
-                    intent.putExtra("data", photobooth.getName());
+                    intent.putExtra("data", position);
                     context.startActivity(intent);
                 }
             });

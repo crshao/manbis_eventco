@@ -32,7 +32,7 @@ public class DecorationResultAdapter extends RecyclerView.Adapter<DecorationResu
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        test = "Decoration";
+        test = "Decoration & Lighting";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
@@ -47,7 +47,7 @@ public class DecorationResultAdapter extends RecyclerView.Adapter<DecorationResu
 
     @Override
     public int getItemCount() {
-        return 0;
+       return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -69,7 +69,7 @@ public class DecorationResultAdapter extends RecyclerView.Adapter<DecorationResu
                     Decoration decoration = list.get(position);
                     Intent intent = new Intent(context, BookVendor.class);
                     intent.putExtra("occasion", test);
-                    intent.putExtra("data", decoration.getName());
+                    intent.putExtra("data", position);
                     context.startActivity(intent);
                 }
             });

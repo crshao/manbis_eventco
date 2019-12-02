@@ -32,7 +32,7 @@ public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyRe
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        test = "Photography";
+        test = "Photography & Videography";
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_result, parent, false);
         return new ViewHolder(view);
     }
@@ -69,7 +69,7 @@ public class PhotographyResultAdapter extends RecyclerView.Adapter<PhotographyRe
 
                     Intent intent = new Intent(context, BookVendor.class);
                     intent.putExtra("occasion", test);
-                    intent.putExtra("data", photography.getName());
+                    intent.putExtra("data", position);
                     context.startActivity(intent);
                 }
             });

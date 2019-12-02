@@ -68,7 +68,7 @@ public class EntertainmentResultAdapter extends RecyclerView.Adapter<Entertainme
                     Entertainment entertainment = list.get(position);
                     Intent intent = new Intent(context, BookVendor.class);
                     intent.putExtra("occasion", test);
-                    intent.putExtra("data", entertainment.getName());
+                    intent.putExtra("data", position);
                     context.startActivity(intent);
                 }
             });

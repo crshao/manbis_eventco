@@ -15,11 +15,11 @@ public class PhotographyData {
     };
 
     private static String[] desc = {
-            "Full day, custom mural background, 2 movie video, max 20 printout (free custom size)",
-            "Full day, 2 movie video, max 20 printout (free custom size)",
-            "Full day, 1 movie video, max 10 printout (free custom size)",
-            "Photo full day, 1 movie video, 5 print out (A0)",
-            "Photo full day, 1 movie video, 5 print out (A0) + free photo album"
+            "Full day, custom mural background, 2 movie video, max 20 printout (free custom size)\n",
+            "Full day, 2 movie video, max 20 printout (free custom size)\n",
+            "Full day, 1 movie video, max 10 printout (free custom size)\n",
+            "Photo full day, 1 movie video, 5 print out (A0)\n",
+            "Photo full day, 1 movie video, 5 print out (A0) + free photo album\n"
     };
 
     private static String[] price = {
@@ -31,19 +31,19 @@ public class PhotographyData {
     };
 
     private static String[] phoneNum = {
-            "085887332990",
-            "08123479432",
-            "087788435921",
-            "081287407345",
-            "087864936455"
+            "085887332990\n",
+            "08123479432\n",
+            "087788435921\n",
+            "081287407345\n",
+            "087864936455\n"
     };
 
     private static String[] address = {
-            "Taman Pondok Jati K-20 , RT. 19 RW. 04 Geluran, Taman.",
-            "Jl. Raya Nginden No.55",
-            "Jl. Imam Bonjol 99",
-            "Jalan Arif Rahman Hakim, Keputih, Sukolilo",
-            "Jalan Raya Mulyosari No.77"
+            "Taman Pondok Jati K-20 , RT. 19 RW. 04 Geluran, Taman.\n",
+            "Jl. Raya Nginden No.55\n",
+            "Jl. Imam Bonjol 99\n",
+            "Jalan Arif Rahman Hakim, Keputih, Sukolilo\n",
+            "Jalan Raya Mulyosari No.77\n"
     };
 
     private static int[] images = {
@@ -62,6 +62,7 @@ public class PhotographyData {
             photography.setName(name[i]);
             photography.setPhoneNum(phoneNum[i]);
             photography.setPrice(price[i]);
+            photography.setDesc(desc[i]);
             photography.setAddress(address[i]);
             photography.setImages(images[i]);
 

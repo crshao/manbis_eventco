@@ -72,7 +72,7 @@ public class FilterResult extends AppCompatActivity {
                 showPhotography(listPhotography);
                 break;
             case "Photobooth" :
-                ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
+                ArrayList<Photobooth> listPhotobooth = new ArrayList<Photobooth>();
                 listPhotobooth.addAll(PhotoboothData.getPhotoboothData());
                 showPhotobooth(listPhotobooth);
                 break;
@@ -94,7 +94,6 @@ public class FilterResult extends AppCompatActivity {
         recyclerView.addItemDecoration(itemDecoration);
         EntertainmentResultAdapter entertainmentResultAdapter = new EntertainmentResultAdapter(listEntertainment,this);
         recyclerView.setAdapter(entertainmentResultAdapter);
-
     }
 
     private void showPhotobooth(ArrayList<Photobooth> listPhotobooth) {

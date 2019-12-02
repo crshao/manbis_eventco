@@ -6,11 +6,22 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.manbis_eventco.Adapter.VenueResultAdapter;
 import com.example.manbis_eventco.Adapter.ViewPagerAdapter;
+import com.example.manbis_eventco.Data.Catering;
+import com.example.manbis_eventco.Data.CateringData;
+import com.example.manbis_eventco.Data.Decoration;
+import com.example.manbis_eventco.Data.DecorationData;
+import com.example.manbis_eventco.Data.Entertainment;
+import com.example.manbis_eventco.Data.EntertainmentData;
+import com.example.manbis_eventco.Data.Photobooth;
+import com.example.manbis_eventco.Data.PhotoboothData;
+import com.example.manbis_eventco.Data.Photography;
+import com.example.manbis_eventco.Data.PhotographyData;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.Data.VenueData;
 import com.google.android.material.button.MaterialButton;
@@ -28,6 +39,9 @@ public class BookVendor extends AppCompatActivity {
 
     @BindView(R.id.vendorDetails)
     MaterialTextView vendorDetails;
+
+    @BindView(R.id.price)
+    MaterialTextView vendorPrice;
 
     @BindView(R.id.book_button)
     MaterialButton book_button;
@@ -50,12 +64,58 @@ public class BookVendor extends AppCompatActivity {
         switch(occasion)
         {
             case "Venue":
-                ArrayList<Venue> list = new ArrayList<>();
-                list.addAll(VenueData.getVenueData());
-                Venue venue = list.get(data);
+                ArrayList<Venue> listVenue = new ArrayList<>();
+                listVenue.addAll(VenueData.getVenueData());
+                Venue venue = listVenue.get(data);
                 nama_vendor.setText(venue.getName());
                 vendorDetails.setText(venue.getDesc());
+                vendorPrice.setText(venue.getPrice());
                 img_view.setImageResource(venue.getImage());
+                break;
+            case "Catering":
+                ArrayList<Catering> listCatering = new ArrayList<>();
+                listCatering.addAll(CateringData.getCateringData());
+                Catering catering = listCatering.get(data);
+                nama_vendor.setText(catering.getName());
+                vendorDetails.setText(catering.getPhonenum() + catering.getAddress());
+                img_view.setImageResource(catering.getImage());
+                vendorPrice.setText(catering.getPrice());
+                break;
+            case "Decoration & Lighting":
+                ArrayList<Decoration> listDecoration = new ArrayList<>();
+                listDecoration.addAll(DecorationData.getDecorationData());
+                Decoration decoration = listDecoration.get(data);
+                nama_vendor.setText(decoration.getName());
+                vendorDetails.setText(decoration.getDesc());
+                img_view.setImageResource(decoration.getImage());
+                vendorPrice.setText(decoration.getPrice());
+                break;
+            case "Photobooth":
+                ArrayList<Photobooth> listPhotobooth = new ArrayList<>();
+                listPhotobooth.addAll(PhotoboothData.getPhotoboothData());
+                Photobooth photobooth = listPhotobooth.get(data);
+                nama_vendor.setText(photobooth.getName());
+                vendorDetails.setText(photobooth.getDesc());
+                img_view.setImageResource(photobooth.getImages());
+                vendorPrice.setText(photobooth.getPrice());
+                break;
+            case "Photography & Videography" :
+                ArrayList<Photography> listPhotography = new ArrayList<>();
+                listPhotography.addAll(PhotographyData.getPhotographyData());
+                Photography photography = listPhotography.get(data);
+                nama_vendor.setText(photography.getName());
+                vendorDetails.setText(photography.getDesc()+photography.getPhoneNum()+photography.getAddress());
+                img_view.setImageResource(photography.getImages());
+                vendorPrice.setText(photography.getPrice());
+                break;
+            case "Entertainment":
+                ArrayList<Entertainment> listEntertainment = new ArrayList<>();
+                listEntertainment.addAll(EntertainmentData.getEntertainmentData());
+                Entertainment entertainment = listEntertainment.get(data);
+                nama_vendor.setText(entertainment.getName());
+                vendorDetails.setText(entertainment.getDesc());
+                img_view.setImageResource(entertainment.getImage());
+                vendorPrice.setText(entertainment.getPrice());
                 break;
         }
 

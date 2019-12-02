@@ -23,19 +23,19 @@ public class CateringData {
     };
 
     private static String[] phoneNum = {
-            "081754647386",
-            "(031)8295564",
-            "(031)3818265",
-            "(031)3536335",
-            "081215339470"
+            "081754647386 \n",
+            "(031)8295564\n",
+            "(031)3818265\n",
+            "(031)3536335\n",
+            "081215339470\n"
     };
 
     private static String[] address = {
-            "Baratajaya XX/91",
-            "Jl. Dukuh Menanggal IX/2y, Surabaya",
-            "Jalan Bronggalan Sawah Gang IV F No. 67, Tambaksari",
-            "Jl. Tg Raja I No.25, Perak Bar., Kec. Krembangan",
-            "Jl. Simo Tambaan Sekolahan No.99 A, Simomulyo, Kec. Sukomanunggal"
+            "Baratajaya XX/91\n",
+            "Jl. Dukuh Menanggal IX/2y, Surabaya\n",
+            "Jalan Bronggalan Sawah Gang IV F No. 67, Tambaksari\n",
+            "Jl. Tg Raja I No.25, Perak Bar., Kec. Krembangan\n",
+            "Jl. Simo Tambaan Sekolahan No.99 A, Simomulyo, Kec. Sukomanunggal\n"
     };
 
     private static int[] images = {

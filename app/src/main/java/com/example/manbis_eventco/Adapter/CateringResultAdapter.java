@@ -71,7 +71,7 @@ public class CateringResultAdapter extends RecyclerView.Adapter<CateringResultAd
 //                    Toast.makeText(context, catering.getName(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, BookVendor.class);
                     intent.putExtra("occasion", test);
-                    intent.putExtra("data", catering.getName());
+                    intent.putExtra("data", position);
                     context.startActivity(intent);
                 }
             });
