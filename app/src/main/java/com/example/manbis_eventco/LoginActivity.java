@@ -54,12 +54,9 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.apply();
 
-        Intent intent = new Intent(this, PopUpAfterPayment.class);
+        Intent intent = new Intent(this, EventList.class);
         startActivity(intent);
-
-//        Intent intent = new Intent(this, EventList.class);
-//        startActivity(intent);
-//        finish();
+        finish();
     }
 
     public void register(View view)

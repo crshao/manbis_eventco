@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
         <activity android:name=".PopUpAfterPayment"
-            android:theme="@style/Theme.MyApp">
+            android:theme="@style/Theme.PopUp">
         </activity>
         <activity android:name=".ListVenueResult" />
         <activity android:name=".FiturPayment" />
