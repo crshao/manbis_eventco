@@ -122,7 +122,8 @@
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:backgroundTint="@color/background"
-                    android:text="I Choose You Charizard"
+                    android:text="Book Now"
+                    android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>
             </LinearLayout>
 
