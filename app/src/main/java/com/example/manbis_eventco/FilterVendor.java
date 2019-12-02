@@ -16,6 +16,7 @@ import com.example.manbis_eventco.Adapter.WeddingOccasionAdapter;
 import com.example.manbis_eventco.Data.WeddingOccasion;
 import com.example.manbis_eventco.Data.WeddingOccasionData;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,9 @@ public class FilterVendor extends AppCompatActivity {
 
     @BindView(R.id.button_search)
     MaterialButton button_search;
+
+    @BindView(R.id.tv)
+    MaterialTextView tv;
 
     Bundle bundle;
     String data;
@@ -35,6 +39,7 @@ public class FilterVendor extends AppCompatActivity {
         bundle = getIntent().getExtras();
         data = bundle.getString("data");
 
+        tv.setText(data);
         Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
     }
 

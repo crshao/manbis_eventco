@@ -26,6 +26,7 @@ import com.example.manbis_eventco.Data.Photography;
 import com.example.manbis_eventco.Data.PhotographyData;
 import com.example.manbis_eventco.Data.Venue;
 import com.example.manbis_eventco.Data.VenueData;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
 
@@ -35,6 +36,9 @@ public class FilterResult extends AppCompatActivity {
     /*private ArrayList<Venue> list = new ArrayList<>();*/
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+
+    @BindView(R.id.tv)
+    MaterialTextView tv;
 
 
     @Override
@@ -85,6 +89,8 @@ public class FilterResult extends AppCompatActivity {
                 System.out.println("MASUK KE DEFAULT");
                 break;
         }
+
+        tv.setText(data);
     }
 
     private void showEntertainment(ArrayList<Entertainment> listEntertainment) {

@@ -17,7 +17,7 @@
             android:id="@+id/Sub_Menu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Subab dari Event List"
+            android:text="@string/Wedding_Occasion"
             android:textStyle="bold"
             android:gravity="bottom"
             android:layout_alignParentRight="true"
