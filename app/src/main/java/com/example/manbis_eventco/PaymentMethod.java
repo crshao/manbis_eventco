@@ -55,10 +55,10 @@ public class PaymentMethod extends AppCompatActivity implements AdapterView.OnIt
         spinnerCashier.setOnItemSelectedListener(this);
     }
 
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        String text = parent.getItemAtPosition(position).toString().trim();
     }
 
     @Override
