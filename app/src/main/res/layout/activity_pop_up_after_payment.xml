@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PopUpAfterPayment"
-    android:background="@color/pink">
+    android:background="@drawable/rounded_background"
+    android:backgroundTint="@color/background"
+    android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/opensansregular"
-        android:text="ALKSDASJDOIAJSODIJASOIDJOASIJD\nsadfasdfasdofj"
+        android:fontFamily="@font/opensansextraboldd"
         android:textColor="@color/colorPrimary"
+        android:text="DOR"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="20dp"
+        android:textAlignment="center" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/opensansextraboldd"
-        android:text="INI TV 2"
-        android:textColor="@color/colorAccent"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="You have Completed your Payment\n\n Below is your Booking ID \n \n 255148785"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansbolditalic"
+            android:text="Please take a Screenshot"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

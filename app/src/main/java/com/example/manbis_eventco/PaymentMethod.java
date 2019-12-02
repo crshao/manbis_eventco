@@ -70,5 +70,6 @@ public class PaymentMethod extends AppCompatActivity implements AdapterView.OnIt
     public void move()
     {
         Intent intent = new Intent(this, PopUpAfterPayment.class);
+        startActivity(intent);
     }
 }

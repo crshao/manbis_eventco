@@ -27,8 +27,7 @@ public class PopUpAfterPayment extends Activity {
 
         SharedPreferences preference = getSharedPreferences("pref", MODE_PRIVATE);
         String name = preference.getString("username", "");
-        String text = "Congratulation " + name + ".\nYour booking has just been made!\n" +
-                      "Here is your Booking ID: 255148785";
+        String text = "Congratulation " + name;
 
         String screenshoot = "Please take a screenshot.";
 
