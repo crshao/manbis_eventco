@@ -2,17 +2,17 @@ package com.example.manbis_eventco.Data;
 
 public class Photobooth {
 
-    private static String name;
-    private static String price;
-    private static String desc;
-    private static int images;
+    private String name;
+    private String price;
+    private String desc;
+    private int images;
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        Photobooth.name = name;
+        this.name = name;
     }
 
     public String getPrice() {
@@ -20,7 +20,7 @@ public class Photobooth {
     }
 
     public void setPrice(String price) {
-        Photobooth.price = price;
+        this.price = price;
     }
 
     public String getDesc() {
@@ -28,7 +28,7 @@ public class Photobooth {
     }
 
     public void setDesc(String desc) {
-        Photobooth.desc = desc;
+        this.desc = desc;
     }
 
     public int getImages() {
@@ -36,6 +36,6 @@ public class Photobooth {
     }
 
     public void setImages(int images) {
-        Photobooth.images = images;
+        this.images = images;
     }
 }
