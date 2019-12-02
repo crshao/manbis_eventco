@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -27,6 +33,7 @@ import com.example.manbis_eventco.Data.VenueData;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class BookVendor extends AppCompatActivity {
@@ -61,8 +68,8 @@ public class BookVendor extends AppCompatActivity {
 //
 //        view_pager.setAdapter(viewPagerAdapter);
 
-        switch(occasion)
-        {
+
+        switch (occasion) {
             case "Venue":
                 ArrayList<Venue> listVenue = new ArrayList<>();
                 listVenue.addAll(VenueData.getVenueData());
@@ -99,12 +106,12 @@ public class BookVendor extends AppCompatActivity {
                 img_view.setImageResource(photobooth.getImages());
                 vendorPrice.setText(photobooth.getPrice());
                 break;
-            case "Photography & Videography" :
+            case "Photography & Videography":
                 ArrayList<Photography> listPhotography = new ArrayList<>();
                 listPhotography.addAll(PhotographyData.getPhotographyData());
                 Photography photography = listPhotography.get(data);
                 nama_vendor.setText(photography.getName());
-                vendorDetails.setText(photography.getDesc()+photography.getPhoneNum()+photography.getAddress());
+                vendorDetails.setText(photography.getDesc() + photography.getPhoneNum() + photography.getAddress());
                 img_view.setImageResource(photography.getImages());
                 vendorPrice.setText(photography.getPrice());
                 break;
@@ -119,5 +126,11 @@ public class BookVendor extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    @OnClick(R.id.book_button)
+    public void move(View view){
+        Intent intent = new Intent(this, PaymentMethod.class);
+        startActivity(intent);
     }
 }

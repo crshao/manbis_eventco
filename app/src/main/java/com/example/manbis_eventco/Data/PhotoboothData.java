@@ -1,7 +1,5 @@
 package com.example.manbis_eventco.Data;
-
 import com.example.manbis_eventco.R;
-
 import java.util.ArrayList;
 
 public class PhotoboothData {

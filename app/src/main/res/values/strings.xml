@@ -20,5 +20,31 @@
         <item>Photobooth</item>
         <item>Entertainment</item>
     </string-array>
+    
+    <string-array name="Transfer">
+        <item>Mandiri</item>
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>BRI</item>
+    </string-array>
+
+    <string-array name="CreditCard">
+        <item>Jenius</item>
+        <item>PayPal</item>
+        <item>Flazz</item>
+        <item>Visa</item>
+    </string-array>
+
+    <string-array name="ATM">
+        <item>Mandiri</item>
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>BRI</item>
+    </string-array>
+    
+    <string-array name="Cashier">
+        <item>Indomaret</item>
+        <item>Alfamaret</item>
+    </string-array>
 
 </resources>
