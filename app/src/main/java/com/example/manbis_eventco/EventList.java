@@ -17,8 +17,8 @@ public class EventList extends AppCompatActivity {
     @BindView(R.id.btn_wedding)
     MaterialButton btn_wedding;
 
-    @BindView(R.id.test)
-    TextView test;
+//    @BindView(R.id.test)
+//    TextView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class EventList extends AppCompatActivity {
         setContentView(R.layout.activity_event_list);
         ButterKnife.bind(this);
 
-        SharedPreferences preference = getSharedPreferences("pref", MODE_PRIVATE);
-        String name = preference.getString("username", "");
-        String text = "Hello " + name;
-        test.setText(text);
+//        SharedPreferences preference = getSharedPreferences("pref", MODE_PRIVATE);
+//        String name = preference.getString("username", "");
+//        String text = "Hello " + name;
+//        test.setText(text);
     }
 
     @OnClick(R.id.btn_wedding)

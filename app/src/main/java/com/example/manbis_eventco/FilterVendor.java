@@ -40,7 +40,7 @@ public class FilterVendor extends AppCompatActivity {
         data = bundle.getString("data");
 
         tv.setText(data);
-        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.button_search)
